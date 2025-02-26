@@ -27,8 +27,7 @@ A dynamic web application for managing and participating in gaming tournaments, 
 bash
 npm install
 
-Set up environment variables in .env.local (optional, for production):
-NEXT_PUBLIC_BACKEND_URL=https://your-backend.herokuapp.com/api/tournaments
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8080/api/tournaments
 
 ### Run locally:
 bash
@@ -36,7 +35,7 @@ npm run dev
 
 Access at http://localhost:3000.
 
-## Backend (Spring Boot)
+### Backend (Spring Boot)
 Navigate to the tournament-api/ directory:
 bash
 cd tournament-api
@@ -63,6 +62,11 @@ CREATE DATABASE tournaments_db;
 bash
 mvn clean package
 mvn spring-boot:run
+
+Use Postman or a similar tool to test API endpoints:  
+GET http://localhost:8080/api/tournaments  
+GET http://localhost:8080/api/tournaments/{id}  
+POST http://localhost:8080/api/tournaments (with JSON payload, e.g., {"title": "Test Tournament", "gameName": "Valorant", ...}). 🛠️
 
 # ScreenShots
 
