@@ -24,7 +24,7 @@ A dynamic web application for managing and participating in gaming tournaments, 
    cd app
 
 ### Install dependencies:
-bash
+```bash
 npm install
 
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8080/api/tournaments
