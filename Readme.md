@@ -22,48 +22,47 @@ A dynamic web application for managing and participating in gaming tournaments, 
 1. Navigate to the `app/` directory:
    ```bash
    cd app
-
-### Install dependencies:
-```bash
-npm install
+   
+2. Install Dependencies
+      ```bash
+      npm install
 
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8080/api/tournaments
 
-### Run locally:
-bash
-npm run dev
+3. Run locally:
+   ```bash
+   npm run dev
 
 Access at http://localhost:3000.
 
 ### Backend (Spring Boot)
-Navigate to the tournament-api/ directory:
-bash
-cd tournament-api
+1. Navigate to the tournament-api/ directory:
+   ```bash
+   cd tournament-api
 
-### Configure PostgreSQL in src/main/resources/application.properties:
+2. Configure PostgreSQL in src/main/resources/application.properties:
+   ```bash
+   spring.datasource.url=jdbc:postgresql://localhost:5432/tournaments_db
+   spring.datasource.username=postgres
+   spring.datasource.password=your_password
+   spring.datasource.driver-class-name=org.postgresql.Driver
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+   Replace your_password with your PostgreSQL password.
 
-properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/tournaments_db
-spring.datasource.username=postgres
-spring.datasource.password=your_password
-spring.datasource.driver-class-name=org.postgresql.Driver
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-Replace your_password with your PostgreSQL password.
+3. Create the tournaments_db database if not already created:
+   ```sql
+   psql -U postgres
+   CREATE DATABASE tournaments_db;
+   \q
 
-### Create the tournaments_db database if not already created:
-sql
-psql -U postgres
-CREATE DATABASE tournaments_db;
-\q
+4. Build and run:
+   ```bash
+   mvn clean package
+   mvn spring-boot:run
 
-### Build and run:
-bash
-mvn clean package
-mvn spring-boot:run
-
-Use Postman or a similar tool to test API endpoints:  
+#Use Postman or a similar tool to test API endpoints:  
 GET http://localhost:8080/api/tournaments  
 GET http://localhost:8080/api/tournaments/{id}  
 POST http://localhost:8080/api/tournaments (with JSON payload, e.g., {"title": "Test Tournament", "gameName": "Valorant", ...}). 🛠️
