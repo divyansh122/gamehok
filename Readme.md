@@ -85,6 +85,19 @@ POST http://localhost:8080/api/tournaments (with JSON payload, e.g., {"title": "
 ![image](https://github.com/user-attachments/assets/9ad7cb48-a473-4c53-b37d-332f8331f81f)
 ![image](https://github.com/user-attachments/assets/b4b1a666-df75-4235-8bbb-30ec8fc50ee6)
 
+## Approach and Trade-offs
+
+- **Frontend Focus**: Prioritized a polished, responsive UI with Tailwind CSS, focusing on the Tournament Dashboard and Details. Used client-side fetching for simplicity within the 2-day timeline. ⚡
+- **Backend Focus**: Implemented a basic REST API with Spring Boot and JPA, seeding 5 sample tournaments. Limited error handling and validation to meet the deadline. 🛠️
+- **Trade-offs**:  
+  - Hardcoded rules and prize breakdown in the frontend due to time constraints.  
+  - Skipped advanced backend features (e.g., authentication, validation) to focus on core functionality.  
+  - Used client-side rendering (CSR) instead of static generation (SSG) for dynamic data fetching, avoiding build-time dependencies.  
+
+## 🚀 *Future Consideration*
+
+The Spring Boot backend can be deployed to AWS Lambda for serverless scalability and cost savings, leveraging features like SnapStart to mitigate cold start times, ideal for future optimization and variable traffic management.
+
 
 
 
