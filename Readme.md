@@ -1,6 +1,8 @@
 # GameHok Tournament Platform
 
-A dynamic web application for managing and participating in gaming tournaments, featuring a modern, responsive frontend built with Next.js (TypeScript, Tailwind CSS) and a robust backend powered by Spring Boot with PostgreSQL. This project fulfills a coding assignment focused on frontend polish and backend integration, with optional bonus features included.
+A dynamic web application for managing and participating in gaming tournaments, featuring a modern, responsive frontend built with Next.js (TypeScript, Tailwind CSS) and a robust backend powered by Spring Boot with PostgreSQL. This project fulfills a coding assignment focused on frontend polish and backend integration, with optional bonus features included. 
+
+### The theme of the dashboard  is inspired from your main website **https://www.gamehok.com/**
 
 ## Overview
 
